@@ -1,0 +1,28 @@
+
+body {
+    margin: 0 auto;	
+    padding: 0;
+    min-width: 900px;
+
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    text-transform: uppercase;
+    color: #000000;
+    
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: #f2f2f2;
+}
+
+.page-calalog {
+    backdrop-filter: blur(10px);
+    background-position: top -210px center;
+    height: 100vh;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+	color: #000000;
+}
