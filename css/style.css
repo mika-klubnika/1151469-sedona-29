@@ -1,22 +1,52 @@
+:root {
+    --basic-black: #000000;
+    --black-medium: #231f20; /* logo html academy */
+    --black-light: #333333;
+    --opacity-black: rgba(0, 0, 0, 0.3);
+    --basic-white: #ffffff;
+    --opacity-white: rgba(255, 255, 255, 0.3);
+    --background-gray: #f2f2f2;
+    --background-footer: rgba(255, 255, 255, 0.9);
+    --gray-medium: #a9a9a9; /* иконка календаря */
+    --gray-light: #eeeeee;
+    --blue: #81b3d2;
+    --blue-medium: #669EC0;
+    --blue-dark: #5496BD;
+    --brown: #766357;
+    --brown-medium: #604E43;
+    --brown-dark: #503E33;
+    --active-footer-logo: #bdbbbc;
+}
 
 body {
-    margin: 0 auto;	
+    min-width: 1200px;
+    margin: 0;	
     padding: 0;
-    min-width: 900px;
+    
 
     font-family: 'PT Sans', 'Arial', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
     text-transform: uppercase;
-    color: #000000;
-    
+
+    color: var(--black-light);
+    background-color: var(--background-gray);
+
     background-image: url(../img/background.jpg);
     background-repeat: no-repeat;
     background-position: top center;
-    background-color: #f2f2f2;
 }
 
 a {
     text-decoration: none;
-    color: #000000;
+    color: var(--basic-black);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .page-catalog {
@@ -25,4 +55,174 @@ a {
     
     backdrop-filter: blur(10px);
     background-position: top -210px center;
+}
+
+.main-navigation {
+    line-height: 26px;
+    font-weight: 700;
+    background-color: var(--basic-white);
+}
+
+.site-navigation {
+    list-style: none;
+}
+
+.site-navigation-link:hover,
+.site-navigation-link:focus {
+    color: var(--blue);
+}
+
+.site-navigation-link:active{
+    color: var(--basic-black);
+    opacity: 0.3;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: var(--basic-white);
+    /* -webkit-box-shadow: 2px 8px 12px 5px rgba(41, 45, 50, 0.29);
+    -moz-box-shadow:    2px 8px 12px 5px rgba(41, 45, 50, 0.29);
+    box-shadow:         2px 8px 12px 5px rgba(41, 45, 50, 0.29); */
+}
+
+.advantage-txt {
+    line-height: 26px;
+}
+
+.advantage-title {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.advantage-list,
+.possibility-list,
+.footer-icon-list,
+.result-search-list {
+    list-style: none;
+}
+
+.advantage-item {
+    background-color: var(--gray-light);
+}
+
+.advantage-item:first-child,
+.advantage-item:nth-child(2) {
+    color: var(--basic-white);
+    background-color: var(--blue);
+}
+
+.advantage-item h3 {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.possibility-list {
+    color: var(--black-light);
+    background-color: var(--basic-white);
+}
+
+.hotel-search p {
+    line-height: 24px;
+}
+
+.hotel-search-title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.hotel-search-button,
+.reservation-button {
+    color: var(--basic-white);
+    background-color: var(--brown);
+}
+
+.hotel-search-button:hover,
+.hotel-search-button:focus,
+.reservation-button:hover,
+.reservation-button:focus {
+    background-color: var(--brown-medium);
+}
+
+.hotel-search-button:active,
+.reservation-button:active {
+    color: var(--opacity-white);
+    background-color: var(--brown-dark);
+}
+
+.map {
+    background-image: url(../img/map.png);
+}
+
+.main-footer {
+    background-color: var(--background-footer);
+}
+
+.footer-copyright-link {
+    fill: var(--black-medium);
+}
+
+.footer-copyright-link:hover,
+.footer-copyright-link:focus {
+    fill: var(--blue);
+}
+
+.footer-copyright-link:active {
+    fill: var(--active-footer-logo);
+}
+
+/* catalog */
+.sort-filter-results {
+    font-size: 21px;
+    line-height: 26px; 
+    font-weight: 700;
+    color: var(--basic-black); 
+}
+
+.sort-filter-txt {
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--basic-black); 
+}
+
+.sort-filter a {
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--opacity-black);
+}
+
+.sort-filter a:hover,
+.sort-filter a:focus {
+    color: var(--blue);
+}
+
+.sort-filter a:active {
+    color: var(--basic-black);
+}
+
+.result-search-item {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.result-search-item h3{
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.detailed-link {
+    color: var(--basic-white);
+    background-color: var(--blue);
+}
+
+.detailed-link:hover,
+.detailed-link:focus {
+    background-color: var(--blue-medium);
+}
+
+.detailed-link:active {
+    color: var(--opacity-white);
+    background-color: var(--blue-dark);
 }
