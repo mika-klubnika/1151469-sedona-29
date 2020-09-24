@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page-catalog">
-    <header class="main-header container">
+<body class="page-body page-catalog">
+  <div class="container">
+    <header class="main-header">
         <nav class="main-navigation">
           <a class="main-logo" href="index.html">
-            <img src="img/logo.png" width="170" height="70" alt="Логотип «Седона»">
+            <img src="img/logo.png" width="138" height="70" alt="Логотип «Седона»">
           </a>
-          <div class="main-navigation-wrapper">
               <ul class="site-navigation list">
                 <li class="site-navigation-item">
                   <a class="site-navigation-link clicking" href="#">Информация</a>
@@ -26,14 +26,13 @@
                   <a class="site-navigation-link clicking" href="#">Карта штата</a>
                 </li>
                 <li class="site-navigation-item">
-                  <a class="site-navigation-link clicking" href="#">Гостиницы</a>
+                  <a class="site-navigation-link active">Гостиницы</a>
                 </li>
               </ul>
-          </div>
         </nav>
     </header>
     
-    <main class="container">
+    <main class="main-container">
         <section class="hotel-filter">
             <h2 class="visually-hidden">Фильтр гостиниц</h2>
             <!-- Здесь будет форма -->
@@ -45,6 +44,16 @@
             <a href="#">По цене</a>
             <a href="#">По типу</a>
             <a href="#">По рейтингу</a>
+            <a href="#">
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+              </svg>                
+            </a>
+            <a href="#">
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 10L0 0H11" fill="#81B3D2"/>
+              </svg>                
+            </a>
         </aside>
 
         <section class="result-search">
@@ -58,9 +67,21 @@
                   </a>
                     <span>Гостиница</span>
                     <span>ОТ 4000 Р.</span>
-                    <a class="detailed-link" href="#">Подробнее</a>
-                    <a class="reservation-button" href="#">Забронировать</a>
-                    <span>Рейтинг: 8,5</span>
+                    <a class="detailed-link button-blue" href="#">Подробнее</a>
+                    <a class="reservation-button button-brown" href="#">Забронировать</a>
+                    <span class="rating">Рейтинг: 8,5</span>
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                    </svg>
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                    </svg>
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                    </svg>
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                    </svg>                      
                 </li>
                 <li class="result-search-item border-bottom">
                   <img src="img/desert_quail_inn.jpg" width="135" height="90" alt="Desert Quail Inn">
@@ -69,9 +90,18 @@
                   </a>    
                     <span>Мотель</span>
                     <span>ОТ 3000 Р.</span>
-                    <a class="detailed-link" href="#">Подробнее</a>
-                    <a class="reservation-button" href="#">Забронировать</a>
-                    <span>Рейтинг: 8,9</span>
+                    <a class="detailed-link button-blue" href="#">Подробнее</a>
+                    <a class="reservation-button button-brown" href="#">Забронировать</a>
+                    <span class="rating">Рейтинг: 8,9</span>
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                    </svg>
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                    </svg>
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                    </svg>
                 </li>
                 <li class="result-search-item border-bottom">
                   <img src="img/villas_at_poco_diablo.jpg" width="135" height="90" alt="Villas at Poco Diablo">
@@ -80,32 +110,39 @@
                   </a>
                     <span>Апартаменты</span>
                     <span>ОТ 2000 Р.</span>
-                    <a class="detailed-link" href="#">Подробнее</a>
-                    <a class="reservation-button" href="#">Забронировать</a>
-                    <span>Рейтинг: 9,2</span>
+                    <a class="detailed-link button-blue" href="#">Подробнее</a>
+                    <a class="reservation-button button-brown" href="#">Забронировать</a>
+                    <span class="rating">Рейтинг: 9,2</span>
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                    </svg>
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                    </svg>
                 </li>
             </ul>
         </section>
 
     </main>
-    <footer class="main-footer container">
+
+    <footer class="main-footer">
         <div class="contacts">
           <h2 class="visually-hidden">Контакты</h2>
           <p>#visitSEDONA</p>
-          <a class="contacts-phone clicking" href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
+          <a class="contacts-phone" href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
         </div>
 
         <div class="footer-icon"> 
           <h2 class="visually-hidden">Соц сети</h2>
           <ul class="footer-icon-list list">
             <li class="footer-icon-item">
-              <a class="footer-icon-link button" href="#">Твиттер</a>
+              <a class="footer-icon-link button-blue" href="#">Твиттер</a>
             </li>
             <li  class="footer-icon-item">
-              <a class="footer-icon-link button" href="#">Фейсбук</a>
+              <a class="footer-icon-link button-blue" href="#">Фейсбук</a>
             </li>
             <li  class="footer-icon-item">
-              <a class="footer-icon-link button" href="#">Ютуб</a>
+              <a class="footer-icon-link button-blue" href="#">Ютуб</a>
             </li>
           </ul>
         </div>
@@ -119,6 +156,7 @@
           </a>
         </div>
     </footer>
+    </div>
     <script></script>
 </body>
 </html>

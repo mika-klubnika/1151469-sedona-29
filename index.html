@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header class="main-header container">
+  <body class="page-body"> 
+    <div class="container"> 
+    <header class="main-header">
       <nav class="main-navigation">
         <a class="main-logo">
-          <img src="img/logo.png" width="170" height="70" alt="Логотип «Седона»">
+          <img src="img/logo.png" width="138" height="70" alt="Логотип «Седона»">
         </a>
-        <div class="main-navigation-wrapper">
             <ul class="site-navigation list">
               <li class="site-navigation-item">
                 <a class="site-navigation-link clicking " href="#">Информация</a>
@@ -28,26 +28,30 @@
                 <a class="site-navigation-link clicking " href="catalog.html">Гостиницы</a>
               </li>
             </ul>
-        </div>
       </nav>
     </header>
 
-    <main class="container">
+    <main class="main-container">
       <h1 class="visually-hidden">Седона. Главная страница.</h1>
   
       <section class="welcome-slogan">
         <h2 class="visually-hidden">Добро пожаловать в великолепную Седону.</h2>
         <img src="img/welcome.png" width="456" height="350" alt="Добро пожаловать в великолепную Седону, потому что Гранд-Каньон отстой">
       </section>
-
+      
       <section class="advantage">
         <p class="advantage-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="advantage-text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        
         <ol class="advantage-list list">
           <li class="advantage-item blue-block">
+
+            <div class="wrapper-advantage-item">  <!-- контейнер -->
             <h3>Настоящий городок</h3>
             <span>— №1 —</span>
             <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
+
             <img src="img/village.jpg" width="800" height="256" alt="Настоящий городок">
 
             <ul class="possibility-list list">
@@ -67,9 +71,13 @@
 
           </li>
           <li class="advantage-item blue-block">
+
+            <div class="wrapper-advantage-item"> <!-- контейнер -->
             <h3>Там есть Мост дьявола</h3>
             <span>— №2 —</span>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            </div>
+
             <img src="img/bridge.jpg" width="800" height="256" alt="Мост дьявола">
           </li>
           <li class="advantage-item">
@@ -89,12 +97,12 @@
           </li>
         </ol>
       </section>
-
+      
       <section class="hotel-search">
         <h2 class="visually-hidden">Поиск гостиницы в седоне</h2>
         <p class="hotel-search-title">Заинтересовались?</p>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <button class="hotel-search-button button">Поиск гостиницы в седоне</button>
+        <button class="hotel-search-button button-brown">Поиск гостиницы в седоне</button>
         <!-- Здесь будет форма -->
       </section>
 
@@ -104,24 +112,24 @@
       </section>
 
     </main>
-    <footer class="main-footer container">
+    <footer class="main-footer">
         <div class="contacts">
           <h2 class="visually-hidden">Контакты</h2>
           <p>#visitSEDONA</p>
-          <a class="contacts-phone clicking" href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
+          <a class="contacts-phone" href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
         </div>
 
         <div class="footer-icon"> 
           <h2 class="visually-hidden">Соц сети</h2>
           <ul class="footer-icon-list list">
             <li class="footer-icon-item">
-              <a class="footer-icon-link button" href="#">Твиттер</a>
+              <a class="footer-icon-link button-blue" href="#">Твиттер</a>
             </li>
             <li  class="footer-icon-item">
-              <a class="footer-icon-link button" href="#">Фейсбук</a>
+              <a class="footer-icon-link button-blue" href="#">Фейсбук</a>
             </li>
             <li  class="footer-icon-item">
-              <a class="footer-icon-link button" href="#">Ютуб</a>
+              <a class="footer-icon-link button-blue" href="#">Ютуб</a>
             </li>
           </ul>
         </div>
@@ -135,6 +143,7 @@
           </a>
         </div>
     </footer>
+    </div>
     <script></script>
   </body>
 </html>
