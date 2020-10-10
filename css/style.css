@@ -12,6 +12,8 @@
   --gray-medium: rgb(169, 169, 169); /* иконка календаря */
   --gray-light: rgb(238, 238, 238);
   --gray-background: rgb(242, 242, 242);
+  --gray-toggle: rgb(171, 171, 171);
+  --gray-shadow: rgb(207, 207, 207, 0.6);
   --gray: rgb(202, 202, 202);
 
   --blue: hsl(203, 47%, 66%);
@@ -169,10 +171,6 @@ img {
   margin-right: 240px;
 }
 
-.site-navigation-link {
-  display: block;
-}
-
 .site-navigation-link-active {
   color: var(--brown);
 }
@@ -287,31 +285,26 @@ img {
   padding: 160px 52px 0 52px;
 }
 
-.possibility-item:first-child::before {
+.possibility-item::before {
   content: "";
   position: absolute;
-  top: 60px;
-  right: 163px;
+  top: 57px;
+  right: 165px;
+}
+
+.possibility-item-residence::before {
   width: 75px;
   height: 72px;
   background-image: url(../img/home.png);
 }
 
-.possibility-item:nth-child(2)::before {
-  content: "";
-  position: absolute;
-  top: 60px;
-  right: 163px;
+.possibility-item-food::before {
   width: 75px;
   height: 70px;
   background-image: url(../img/food.png);
 }
 
-.possibility-item:last-child::before {
-  content: "";
-  position: absolute;
-  top: 55px;
-  right: 168px;
+.possibility-item-souvenirs::before {
   width: 64px;
   height: 77px;
   background-image: url(../img/souvenirs.png);
@@ -356,8 +349,13 @@ img {
   background-color: var(--gray-light);
 }
 
+.map iframe {
+  border: none;
+}
+
 /* FOOTER */
 .main-footer {
+  position: relative;
   min-height: 120px;
   padding-bottom: 36px;
   display: flex;
@@ -399,13 +397,20 @@ img {
   flex-wrap: wrap;
 }
 
+.footer-icon-item {
+  margin: 3px;
+}
+
 .footer-icon-link {
   width: 46px;
   height: 48px;
-  margin: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer-icon-link svg {
+  margin: auto;
 }
 
 .footer-copyright {
@@ -445,7 +450,7 @@ img {
 }
 
 .wrapper-checked {
-  width: 415px;
+  width: 485px;
   display: flex;
   justify-content: space-between;
 }
@@ -458,6 +463,7 @@ img {
 }
 
 .filter-item {
+  width: 210px;
   margin: 10px;
   padding: 0;
   border: none;
@@ -485,53 +491,99 @@ img {
 
 .filter-option {
   margin-bottom: 25px;
-  padding-left: 45px;
 }
 
 .filter-option label {
   position: relative;
+  padding-left: 45px;
   display: block;
   cursor: pointer;
   user-select: none;
 }
 
-.filter-input-checkbox + label::before {
+.filter-input-checkbox:not(:checked) + label::before {
   content: "";
   position: absolute;
+  width: 30px;
+  height: 30px;
   top: 0;
-  left: -42px;
-  width: 23px;
-  height: 23px;
-  border: 2px solid var(--white-basic);
-  border-radius: 3px;
+  left: 0;
+  background-image: url(../img/checkbox-off.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .filter-input-checkbox:checked + label::after {
   content: "";
   position: absolute;
-  top: 0px;
-  left: -37px;
-  width: 23px;
-  height: 17px;
-  background-image: url(../img/shape.svg);
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  background-image: url(../img/checkbox-on.png);
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.filter-input-checkbox:not(:checked):disabled + label::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  background-image: url(../img/checkbox-off-disabled.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  cursor: default;
+}
+
+.filter-input-checkbox:checked:disabled + label::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  background-image: url(../img/checkbox-on-disabled.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  cursor: default;
+}
+
+.filter-input-checkbox:not(:disabled):hover + label::before,
+.filter-input-checkbox:not(:disabled):focus + label::before,
+.filter-input-checkbox:checked:not(:disabled):hover + label::after,
+.filter-input-checkbox:checked:not(:disabled):focus + label::after {
+  opacity: 0.6;
 }
 
 .price-controls {
   width: 317px;
   margin-bottom: 20px;
   display: flex;
+  justify-content: space-between;
   border: 2px solid var(--white-basic);
   border-radius: 2px;
 }
 
-.price-controls input {
+.price-controls-input {
+  max-width: 150px;
   height: 33px;
   color: inherit;
   text-align: center;
   background: transparent;
   border: none;
+}
+
+.price-controls-input::-webkit-outer-spin-button,
+.price-controls-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.price-controls-input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .min-price {
@@ -548,45 +600,53 @@ img {
   left: 156px;
 }
 
-input::placeholder {
+.price-controls-input::placeholder {
   color: inherit;
   font-size: 14px;
-  line-height: 21px;
   text-transform: uppercase;
 }
 
 .range-filter {
   position: relative;
+  --left-width: 0;
+  --right-width: 253px;
 }
 
 .scale {
+  position: relative;
   height: 2px;
   background: var(--white-opacity);
 }
 
 .range-controls .bar {
-  width: 80%;
+  position: absolute;
   height: 2px;
+  right: calc(100% - var(--right-width));
+  left: var(--left-width);
   background: var(--white-basic);
 }
 
 
 .range-controls .toggle {
   position: absolute;
-  top: -7px;
+  top: -9px;
   left: 0;
   width: 19px;
   height: 19px;
   padding: 0;
-  border: 8px solid #ffffff;
-  background-color: #ababab;
+  border: 8px solid var(--white-basic);
+  background-color: var(--gray-toggle);
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
+  box-shadow: 0 2px 1px 0 var(--gray-shadow);
   cursor: pointer;
 }
 
+.range-controls .toggle-min {
+  left: var(--left-width);
+}
+
 .range-controls .toggle-max {
-  left: 253px;
+  left: var(--right-width);
 }
 
 .range-controls .toggle:hover {
@@ -594,9 +654,9 @@ input::placeholder {
 }
 
 .filter-button {
-  width: 137px;
-  height: 36px;
-  padding: 7px 35px;
+  min-width: 137px;
+  min-height: 36px;
+  padding: 5px;
   font: inherit;
   color: inherit;
   text-transform: uppercase;

@@ -54,7 +54,7 @@
                 </li>
                 <li class="filter-option">
                   <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="wifi"
-                    id="filter-wifi">
+                    id="filter-wifi" disabled>
                   <label for="filter-wifi">Wi-Fi</label>
                 </li>
               </ul>
@@ -64,7 +64,7 @@
               <ul class="list">
                 <li class="filter-option">
                   <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hotel"
-                    id="filter-hotel" checked>
+                    id="filter-hotel" checked disabled>
                   <label for="filter-hotel">Гостиница</label>
                 </li>
                 <li class="filter-option">
@@ -85,10 +85,10 @@
               <legend class="filter-title filter-title-price">Стоимость в сутки (Р):</legend>
               <div class="price-controls">
                 <label class="min-price">
-                  <input type="number" name="min-price" placeholder="от 0" value="">
+                  <input class="price-controls-input" type="number" name="min-price" placeholder="от 0" min="0">
                 </label>
                 <label class="max-price">
-                  <input type="number" name="max-price" placeholder="до 3000" value="">
+                  <input class="price-controls-input" type="number" name="max-price" placeholder="до 3000">
                 </label>
               </div>
               <div class="range-filter">
