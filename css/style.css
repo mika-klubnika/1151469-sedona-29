@@ -4,16 +4,18 @@
   --black-light: rgb(51, 51, 51);
   --black-neutral: rgb(102, 102, 102);
   --black-opacity: rgba(0, 0, 0, 0.3);
+  --container-shadow: rgba(41, 45, 50, 0.29);
 
   --white-basic: rgb(255, 255, 255);
   --white-opacity: rgba(255, 255, 255, 0.3);
   --white-opacity-footer: rgba(255, 255, 255, 0.9);
 
-  --gray-medium: rgb(169, 169, 169); /* иконка календаря */
+  --gray-medium: rgb(169, 169, 169);
   --gray-light: rgb(238, 238, 238);
   --gray-background: rgb(242, 242, 242);
   --gray-toggle: rgb(171, 171, 171);
-  --gray-shadow: rgb(207, 207, 207, 0.6);
+  --gray-shadow: rgba(207, 207, 207, 0.6);
+  --gray-date-input: rgb(235, 235, 235);
   --gray: rgb(202, 202, 202);
 
   --blue: hsl(203, 47%, 66%);
@@ -78,6 +80,10 @@ img {
   color: var(--black-opacity);
 }
 
+.button {
+  border: none;
+}
+
 .button-brown {
   color: var(--white-basic);
   background-color: var(--brown);
@@ -134,7 +140,7 @@ img {
   grid-template-rows: min-content 1fr min-content;
 
   background-color: var(--white-basic);
-  box-shadow: 2px 8px 12px 5px rgba(41, 45, 50, 0.29);
+  box-shadow: 2px 8px 12px 5px var(--container-shadow);
 }
 
 /* HEADER */
@@ -339,8 +345,6 @@ img {
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
-
-  border: none;
 }
 
 .map {
@@ -433,10 +437,188 @@ img {
   color: var(--black-medium);
 }
 
+/* Modal window */
+.modal {
+  width: 568px;
+  height: 395px;
+  padding: 55px;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  box-shadow: 2px 8px 12px 5px var(--container-shadow);
+
+  position: relative;
+  margin-bottom: -395px;
+  background-color: var(--white-basic);
+}
+
+.form-search-input {
+  padding: 6px;
+  padding-left: 13px;
+  font: inherit;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.form-search-input::placeholder {
+  color: var(--black-basic);
+}
+
+.form-search-input:focus::placeholder {
+  color: var(--black-opacity);
+}
+
+.field-wrapper {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.field-wrapper-date {
+  position: relative;
+}
+
+.date-input {
+  width: 308px;
+  height: 38px;
+}
+
+.button-calendar::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 6px;
+  right: 5px;
+  background-image: url(../img/calendar.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.button-calendar:hover::after,
+.button-calendar:focus::after {
+  background-image: url(../img/calendar-hover.png);
+}
+
+.button-calendar:active::after {
+  background-image: url(../img/calendar-active.png);
+}
+
+.number-input {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.wrapper-number-button {
+  display: flex;
+  background-color: var(--gray-background);
+}
+
+.wrapper-number-button:hover {
+  background-color: var(--gray-date-input);
+}
+
+.wrapper-number-button:active,
+.wrapper-number-button:focus {
+  background-color: var(--white-basic);
+  outline: 2px solid var(--gray-background);
+}
+
+.form-search-number-button {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  background-color: transparent;
+  outline: none;
+}
+
+.number-button-minus::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 12px;
+  top: 13px;
+  right: 16px;
+  background-color: var(--gray-medium);
+  transform: rotate(90deg);
+}
+
+.number-button-plus::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 11px;
+  top: 13px;
+  right: 18px;
+  background-color: var(--gray-medium);
+  transform: rotate(90deg);
+}
+
+.number-button-plus::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 11px;
+  top: 13px;
+  right: 18px;
+  background-color: var(--gray-medium);
+}
+
+.number-button-minus:hover::before,
+.number-button-plus:hover::before,
+.number-button-plus:hover::after,
+.number-button-minus:focus::before,
+.number-button-plus:focus::before,
+.number-button-plus:focus::after   {
+  background-color: var(--black-basic);
+}
+
+.number-button-minus:active::before,
+.number-button-plus:active::before,
+.number-button-plus:active::after {
+  background-color: var(--blue);
+}
+
+.number-input::-webkit-outer-spin-button,
+.number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.wrapper-number-input {
+  margin-bottom: 23px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.field-wrapper-adults {
+  width: 224px;
+}
+
+.field-wrapper-children {
+  width: 180px;
+}
+
+.button-form-search {
+  min-width: 458px;
+  min-height: 58px;
+  padding: 10px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 /* CATALOG */
 .hotel-filter {
   min-height: 217px;
-  padding: 10px 70px 0 59px;
+  padding: 10px 66px 0 62px;
 
   color: var(--white-basic);
   background-color: var(--blue);
@@ -574,16 +756,14 @@ img {
   text-align: center;
   background: transparent;
   border: none;
+  outline: none;
+  -moz-appearance: textfield;
 }
 
 .price-controls-input::-webkit-outer-spin-button,
 .price-controls-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-.price-controls-input[type=number] {
-  -moz-appearance: textfield;
 }
 
 .min-price {
@@ -604,6 +784,10 @@ img {
   color: inherit;
   font-size: 14px;
   text-transform: uppercase;
+}
+
+.price-controls-input:focus::placeholder {
+  color: var(--white-opacity);
 }
 
 .range-filter {
@@ -670,7 +854,6 @@ img {
 .filter-button:focus {
   color: var(--black-basic);
   background-color: var(--white-basic);
-  outline: none;
 }
 
 .filter-button:active {
@@ -784,7 +967,7 @@ img {
   padding: 25px 70px 30px 73px;
 
   display: grid;
-  grid-template-columns: 156px auto auto 1fr;
+  grid-template-columns: 156px 110px auto 1fr;
   grid-template-rows: auto auto auto;
   column-gap: 8px;
   row-gap: 10px;

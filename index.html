@@ -106,13 +106,57 @@
         <p class="hotel-search-title text">Заинтересовались?</p>
         <p class="hotel-search-text text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения
           гостиниц в седоне</p>
-        <button class="hotel-search-button button-brown">Поиск гостиницы в седоне</button>
-        <!-- Здесь будет форма -->
+        <button class="hotel-search-button button-brown button">Поиск гостиницы в седоне</button>
+        <section class="modal">
+          <h2 class="visually-hidden">Форма поиска гостиницы</h2>
+          <form class="form-search" action="https://echo.htmlacademy.ru" method="post">
+
+            <div class="field-wrapper field-wrapper-date text">
+              <label for="date-of-arrival">Дата заезда:</label>
+              <div class="wrapper-number-button">
+              <input class="form-search-input date-input" type="text" id="date-of-arrival" placeholder="24 апреля 2017">
+              <button class="form-search-number-button button-calendar button" type="button"></button>
+            </div>
+            </div>
+
+            <div class="field-wrapper field-wrapper-date text">
+              <label for="date-of-departure">Дата выезда:</label>
+              <div class="wrapper-number-button">
+              <input class="form-search-input date-input" type="text" id="date-of-departure" placeholder="4 июля 2017">
+              <button class="form-search-number-button button-calendar button" type="button"></button>
+            </div>
+            </div>
+
+            <div class="wrapper-number-input">
+
+              <div class="field-wrapper field-wrapper-adults text">
+                <label for="adults">Взрослые:</label>
+              <div class="wrapper-number-button">
+                <button class="form-search-number-button number-button-minus button" type="button"></button>
+                <input class="form-search-input number-input" type="number" id="adults" placeholder="2">
+                <button class="form-search-number-button number-button-plus button" type="button"></button>
+              </div>
+              </div>
+
+              <div class="field-wrapper field-wrapper-children text">
+                <label for="children">Дети:</label>
+              <div class="wrapper-number-button">
+                <button class="form-search-number-button number-button-minus button" type="button"></button>
+                <input class="form-search-input number-input" type="number" id="children" placeholder="0">
+                <button class="form-search-number-button number-button-plus button" type="button"></button>
+              </div>
+              </div>
+
+            </div>
+
+            <button class="button-form-search button-blue button" type="button">Найти</button>
+          </form>
+        </section>
       </section>
 
       <section class="map">
         <h2 class="visually-hidden">Карта седоны</h2>
-        <iframe src="https://yandex.ru/map-widget/v1/-/CCQ37FbH-A" width="1200" height="594" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CCQ37FbH-A" width="1200" height="594"></iframe>
       </section>
 
     </main>
@@ -171,4 +215,5 @@
   </div>
   <script></script>
 </body>
+
 </html>
