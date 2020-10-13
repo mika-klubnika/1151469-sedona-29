@@ -378,13 +378,13 @@ img {
 .modal-show {
   transform: translateY(0);
   transition-property: transform;
-  transition-duration: 300ms;
+  transition-duration: 1s;
 }
 
 .modal-not-show {
   transform: translateY(-1000px);
   transition-property: transform;
-  transition-duration: 300ms;
+  transition-duration: 1s;
 }
 
 .modal-error {
@@ -990,7 +990,7 @@ img {
   grid-template-columns: 156px 110px auto 1fr;
   grid-template-rows: auto auto auto;
   column-gap: 8px;
-  row-gap: 10px;
+  row-gap: 5px;
 
   font-size: 14px;
   line-height: 21px;
