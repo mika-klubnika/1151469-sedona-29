@@ -107,14 +107,14 @@
         <p class="hotel-search-text text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения
           гостиниц в седоне</p>
         <button class="hotel-search-button button-brown button">Поиск гостиницы в седоне</button>
-        <section class="modal">
+        <section class="modal modal-show">
           <h2 class="visually-hidden">Форма поиска гостиницы</h2>
           <form class="form-search" action="https://echo.htmlacademy.ru" method="post">
 
             <div class="field-wrapper field-wrapper-date text">
               <label for="date-of-arrival">Дата заезда:</label>
               <div class="wrapper-number-button">
-              <input class="form-search-input date-input" type="text" name="date-of-arrival" id="date-of-arrival" placeholder="24 апреля 2017">
+              <input class="form-search-input date-input arrival-input" type="text" name="date-of-arrival" id="date-of-arrival" placeholder="24 апреля 2017">
               <button class="form-search-number-button button-calendar button" type="button"></button>
             </div>
             </div>
@@ -122,7 +122,7 @@
             <div class="field-wrapper field-wrapper-date text">
               <label for="date-of-departure">Дата выезда:</label>
               <div class="wrapper-number-button">
-              <input class="form-search-input date-input" type="text" name="date-of-departure" id="date-of-departure" placeholder="4 июля 2017">
+              <input class="form-search-input date-input departure-input" type="text" name="date-of-departure" id="date-of-departure" placeholder="4 июля 2017">
               <button class="form-search-number-button button-calendar button" type="button"></button>
             </div>
             </div>
@@ -149,7 +149,7 @@
 
             </div>
 
-            <button class="button-form-search button-blue button" type="button">Найти</button>
+            <button class="button-form-search button-blue button" type="submit">Найти</button>
           </form>
         </section>
       </section>
@@ -213,7 +213,7 @@
       </div>
     </footer>
   </div>
-  <script></script>
+  <script src="js/js.js"></script>
 </body>
 
 </html>
