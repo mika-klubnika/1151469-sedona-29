@@ -319,14 +319,14 @@ img {
 }
 
 .hotel-search {
-  min-height: 290px;
   position: relative;
+  min-height: 290px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   background-color: var(--white-basic);
-  z-index: 1;
+
 }
 
 .hotel-search-title {
@@ -353,18 +353,17 @@ img {
 }
 
 /* Modal window */
-.modal-form {
+.modal {
   position: absolute;
+  top: 290px;
   width: 568px;
   min-height: 395px;
-  left: 405px;
-}
-
-.modal {
   padding: 55px;
+
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
+
   box-shadow: 2px 8px 12px 5px var(--container-shadow);
   background-color: var(--white-basic);
 
@@ -668,7 +667,6 @@ img {
   position: relative;
   padding-left: 41px;
   display: block;
-  cursor: pointer;
   user-select: none;
 }
 
@@ -682,6 +680,7 @@ img {
   background-image: url(../img/checkbox-off.png);
   background-repeat: no-repeat;
   background-position: 0 0;
+  cursor: pointer;
 }
 
 .filter-input-checkbox:checked+label::after {
@@ -694,31 +693,16 @@ img {
   background-image: url(../img/checkbox-on.png);
   background-repeat: no-repeat;
   background-position: 0 0;
+  cursor: pointer;
 }
 
 .filter-input-checkbox:not(:checked):disabled+label::before {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: -2px;
-  left: 0;
   background-image: url(../img/checkbox-off-disabled.png);
-  background-repeat: no-repeat;
-  background-position: 0 0;
   cursor: default;
 }
 
 .filter-input-checkbox:checked:disabled+label::after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: -2px;
-  left: 0;
   background-image: url(../img/checkbox-on-disabled.png);
-  background-repeat: no-repeat;
-  background-position: 0 0;
   cursor: default;
 }
 
