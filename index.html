@@ -108,51 +108,74 @@
           гостиниц в седоне</p>
         <button class="hotel-search-button button-brown button">Поиск гостиницы в седоне</button>
       </section>
-
-      <section class="map">
-        <h2 class="visually-hidden">Форма поиска гостиницы и карта седоны</h2>
-        <form class="modal modal-show form-search" action="https://echo.htmlacademy.ru" method="post">
-
-          <div class="field-wrapper field-wrapper-date text">
+    <section class="modal-form">
+      <h2 class="visually-hidden">Форма поиска гостиницы</h2>
+        <form class="modal modal-show" action="https://echo.htmlacademy.ru" method="post">
+          <div class="field-wrapper field-wrapper-date">
             <label for="date-of-arrival">Дата заезда:</label>
             <div class="wrapper-number-button">
-            <input class="form-search-input date-input arrival-input" type="text" name="date-of-arrival" id="date-of-arrival" placeholder="24 апреля 2017">
-            <button class="form-search-number-button button-calendar button" type="button"></button>
-          </div>
+              <input class="form-search-input date-input arrival-input" type="text" name="date-of-arrival"
+                id="date-of-arrival" placeholder="24 апреля 2017">
+              <button class="form-search-number-button button-calendar button" type="button" aria-label="Календарь"></button>
+            </div>
           </div>
 
-          <div class="field-wrapper field-wrapper-date text">
+          <div class="field-wrapper field-wrapper-date">
             <label for="date-of-departure">Дата выезда:</label>
             <div class="wrapper-number-button">
-            <input class="form-search-input date-input departure-input" type="text" name="date-of-departure" id="date-of-departure" placeholder="4 июля 2017">
-            <button class="form-search-number-button button-calendar button" type="button"></button>
-          </div>
+              <input class="form-search-input date-input departure-input" type="text" name="date-of-departure"
+                id="date-of-departure" placeholder="4 июля 2017">
+              <button class="form-search-number-button button-calendar button" type="button" aria-label="Календарь"></button>
+            </div>
           </div>
 
           <div class="wrapper-number-input">
-
             <div class="field-wrapper field-wrapper-adults text">
               <label for="adults">Взрослые:</label>
-            <div class="wrapper-number-button">
-              <button class="form-search-number-button number-button-minus button" type="button"></button>
-              <input class="form-search-input number-input" type="number" name="adults" id="adults" placeholder="2">
-              <button class="form-search-number-button number-button-plus button" type="button"></button>
-            </div>
+              <div class="wrapper-number-button">
+                <button class="form-search-number-button number-button-minus button" type="button" aria-label="Убавить">
+                  <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="12" height="3" fill="currentColor" />
+                  </svg>
+                </button>
+                <input class="form-search-input number-input" type="number" name="adults" id="adults" placeholder="2">
+                <button class="form-search-number-button number-button-plus button" type="button" aria-label="Прибавить">
+                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
+                      fill="currentColor" />
+                  </svg>
+                </button>
+              </div>
             </div>
 
             <div class="field-wrapper field-wrapper-children text">
               <label for="children">Дети:</label>
-            <div class="wrapper-number-button">
-              <button class="form-search-number-button number-button-minus button" type="button"></button>
-              <input class="form-search-input number-input" type="number" name="children" id="children" placeholder="0">
-              <button class="form-search-number-button number-button-plus button" type="button"></button>
+              <div class="wrapper-number-button">
+                <button class="form-search-number-button number-button-minus button" type="button" aria-label="Убавить">
+                  <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="12" height="3" fill="currentColor" />
+                  </svg>
+                </button>
+                <input class="form-search-input number-input" type="number" name="children" id="children"
+                  placeholder="0">
+                <button class="form-search-number-button number-button-plus button" type="button" aria-label="Прибавить">
+                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
+                      fill="currentColor" />
+                  </svg>
+                </button>
+              </div>
             </div>
-            </div>
-
           </div>
 
           <button class="button-form-search button-blue button" type="submit">Найти</button>
         </form>
+      </section>
+
+      <section class="map">
+        <h2 class="visually-hidden">Карта седоны</h2>
         <iframe src="https://yandex.ru/map-widget/v1/-/CCQ37FbH-A" width="1200" height="594"></iframe>
       </section>
 

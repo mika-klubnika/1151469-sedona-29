@@ -196,6 +196,7 @@ img {
 
 .advantage {
   position: relative;
+  z-index: 1;
 }
 
 .advantage::before {
@@ -319,10 +320,13 @@ img {
 
 .hotel-search {
   min-height: 290px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: var(--white-basic);
+  z-index: 1;
 }
 
 .hotel-search-title {
@@ -348,43 +352,33 @@ img {
   text-transform: uppercase;
 }
 
-.map {
-  height: 594px;
-  background-image: url(../img/map.jpg);
-  background-color: var(--gray-light);
-  overflow: hidden;
-}
-
-.map iframe {
-  border: none;
-}
-
 /* Modal window */
-.modal {
+.modal-form {
+  position: absolute;
   width: 568px;
-  height: 395px;
-  margin: 0 auto;
+  min-height: 395px;
+  left: 405px;
+}
+
+.modal {
   padding: 55px;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
   box-shadow: 2px 8px 12px 5px var(--container-shadow);
-
-  position: relative;
-  margin-bottom: -395px;
   background-color: var(--white-basic);
-}
 
-.modal-show {
   transform: translateY(0);
   transition-property: transform;
   transition-duration: 1s;
 }
 
 .modal-not-show {
-  transform: translateY(-1000px);
+  overflow: hidden;
+  transform: translateY(-500px);
   transition-property: transform;
   transition-duration: 1s;
+  z-index: -10000;
 }
 
 .modal-error {
@@ -470,58 +464,24 @@ img {
 }
 
 .form-search-number-button {
-  position: relative;
   width: 38px;
   height: 38px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: transparent;
-  outline: none;
+  color: var(--gray-medium);
 }
 
-.number-button-minus::before {
-  content: "";
-  position: absolute;
-  width: 3px;
-  height: 12px;
-  top: 13px;
-  right: 16px;
-  background-color: var(--gray-medium);
-  transform: rotate(90deg);
+.form-search-number-button:hover,
+.form-search-number-button:focus {
+  color: var(--black-basic);
 }
 
-.number-button-plus::before {
-  content: "";
-  position: absolute;
-  width: 3px;
-  height: 11px;
-  top: 13px;
-  right: 18px;
-  background-color: var(--gray-medium);
-  transform: rotate(90deg);
-}
-
-.number-button-plus::after {
-  content: "";
-  position: absolute;
-  width: 3px;
-  height: 11px;
-  top: 13px;
-  right: 18px;
-  background-color: var(--gray-medium);
-}
-
-.number-button-minus:hover::before,
-.number-button-plus:hover::before,
-.number-button-plus:hover::after,
-.number-button-minus:focus::before,
-.number-button-plus:focus::before,
-.number-button-plus:focus::after {
-  background-color: var(--black-basic);
-}
-
-.number-button-minus:active::before,
-.number-button-plus:active::before,
-.number-button-plus:active::after {
-  background-color: var(--blue);
+.form-search-number-button:active {
+  color: var(--blue);
 }
 
 .number-input::-webkit-outer-spin-button,
@@ -552,6 +512,17 @@ img {
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.map {
+  height: 594px;
+  background-image: url(../img/map.jpg);
+  background-color: var(--gray-light);
+  overflow: hidden;
+}
+
+.map iframe {
+  border: none;
 }
 
 /* FOOTER */
@@ -637,7 +608,7 @@ img {
 /* CATALOG */
 .hotel-filter {
   min-height: 217px;
-  padding: 10px 66px 0 62px;
+  padding: 26px 66px 0 70px;
 
   color: var(--white-basic);
   background-color: var(--blue);
@@ -664,14 +635,13 @@ img {
 }
 
 .filter-item {
-  width: 210px;
-  margin: 10px;
+  width: 227px;
   padding: 0;
   border: none;
 }
 
 .filter-item-price {
-  margin: 15px 10px 34px 10px;
+  margin: 0 10px 34px 10px;
 }
 
 .filter-title {
@@ -691,12 +661,12 @@ img {
 }
 
 .filter-option {
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 
 .filter-option label {
   position: relative;
-  padding-left: 45px;
+  padding-left: 41px;
   display: block;
   cursor: pointer;
   user-select: none;
@@ -707,7 +677,7 @@ img {
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 0;
+  top: -2px;
   left: 0;
   background-image: url(../img/checkbox-off.png);
   background-repeat: no-repeat;
@@ -719,7 +689,7 @@ img {
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 0;
+  top: -2px;
   left: 0;
   background-image: url(../img/checkbox-on.png);
   background-repeat: no-repeat;
@@ -731,7 +701,7 @@ img {
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 0;
+  top: -2px;
   left: 0;
   background-image: url(../img/checkbox-off-disabled.png);
   background-repeat: no-repeat;
@@ -744,7 +714,7 @@ img {
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 0;
+  top: -2px;
   left: 0;
   background-image: url(../img/checkbox-on-disabled.png);
   background-repeat: no-repeat;
@@ -988,8 +958,8 @@ img {
 
   display: grid;
   grid-template-columns: 156px 110px auto 1fr;
-  grid-template-rows: auto auto auto;
-  column-gap: 8px;
+  grid-template-rows: auto 1fr 27px;
+  column-gap: 7px;
   row-gap: 5px;
 
   font-size: 14px;

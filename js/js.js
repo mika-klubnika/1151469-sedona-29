@@ -6,7 +6,6 @@ const departureInput = document.querySelector('.departure-input');
 
 button.onclick = function() {
   popup.classList.toggle('modal-not-show');
-  dateInput.focus();
   popup.classList.remove("modal-error");
 }
 
