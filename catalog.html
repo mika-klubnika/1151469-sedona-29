@@ -7,10 +7,10 @@
   <title>Каталог</title>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="page-body page-catalog">
+<body>
   <div class="container">
     <header class="main-header">
       <nav class="main-navigation">
@@ -37,24 +37,22 @@
     <main class="main-container">
       <section class="hotel-filter">
         <h2 class="visually-hidden">Фильтр гостиниц</h2>
+
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
           <div class="wrapper-checked">
             <fieldset class="filter-item">
               <legend class="filter-title">Инфраструктура:</legend>
               <ul class="list">
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="swimming-pool"
-                    id="filter-swimming-pool" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="swimming-pool" id="filter-swimming-pool" checked>
                   <label for="filter-swimming-pool">Бассейн</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="parking"
-                    id="filter-parking">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="parking" id="filter-parking">
                   <label for="filter-parking">Парковка</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="wifi"
-                    id="filter-wifi" disabled>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="wifi" id="filter-wifi" disabled>
                   <label for="filter-wifi">Wi-Fi</label>
                 </li>
               </ul>
@@ -63,18 +61,15 @@
               <legend class="filter-title">Тип жилья:</legend>
               <ul class="list">
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hotel"
-                    id="filter-hotel" checked disabled>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hotel" id="filter-hotel" checked disabled>
                   <label for="filter-hotel">Гостиница</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="motel"
-                    id="filter-motel" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="motel" id="filter-motel" checked>
                   <label for="filter-motel">Мотель</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="apartments"
-                    id="filter-apartments" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="apartments" id="filter-apartments" checked>
                   <label for="filter-apartments">Апартаменты</label>
                 </li>
               </ul>
@@ -131,8 +126,7 @@
 
         <ul class="result-search-list list">
           <li class="result-search-item border-bottom">
-            <img class="result-search-item-img" src="img/amara_resort.jpg" width="135" height="90"
-              alt="Amara Resort & Spa">
+            <img class="result-search-item-img" src="img/amara_resort.jpg" width="135" height="90" alt="Amara Resort & Spa">
             <a class="result-search-item-link link clicking" href="#">
               <h3 class="text">Amara Resort & Spa</h3>
             </a>
@@ -144,8 +138,7 @@
             <span class="rating">Рейтинг: 8,5</span>
           </li>
           <li class="result-search-item border-bottom">
-            <img class="result-search-item-img" src="img/desert_quail_inn.jpg" width="135" height="90"
-              alt="Desert Quail Inn">
+            <img class="result-search-item-img" src="img/desert_quail_inn.jpg" width="135" height="90" alt="Desert Quail Inn">
             <a class="result-search-item-link link clicking" href="#">
               <h3 class="text">Desert Quail Inn</h3>
             </a>
@@ -157,8 +150,7 @@
             <span class="rating">Рейтинг: 8,9</span>
           </li>
           <li class="result-search-item border-bottom">
-            <img class="result-search-item-img" src="img/villas_at_poco_diablo.jpg" width="135" height="90"
-              alt="Villas at Poco Diablo">
+            <img class="result-search-item-img" src="img/villas_at_poco_diablo.jpg" width="135" height="90" alt="Villas at Poco Diablo">
             <a class=" result-search-item-link link clicking" href="#">
               <h3 class="text">Villas at Poco Diablo</h3>
             </a>

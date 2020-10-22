@@ -6,10 +6,10 @@
   <title>Седона</title>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="page-body">
+<body>
   <div class="container">
     <header class="main-header">
       <nav class="main-navigation">
@@ -105,8 +105,7 @@
       <section class="hotel-search">
         <h2 class="visually-hidden">Поиск гостиницы в седоне</h2>
         <p class="hotel-search-title text">Заинтересовались?</p>
-        <p class="hotel-search-text text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения
-          гостиниц в седоне</p>
+        <p class="hotel-search-text text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
 
         <div class="wrapper-form-search">
           <button class="hotel-search-button button-brown button">Поиск гостиницы в седоне</button>
@@ -114,8 +113,7 @@
             <form class="modal modal-show form-search" action="https://echo.htmlacademy.ru" method="post">
               <div class="field-wrapper field-wrapper-date">
                 <label for="date-of-arrival">Дата заезда:</label>
-                <input class="form-search-input date-input arrival-input" type="text" name="date-of-arrival"
-                  id="date-of-arrival" placeholder="24 апреля 2017">
+                <input class="form-search-input date-input arrival-input" type="text" name="date-of-arrival" id="date-of-arrival" placeholder="24 апреля 2017">
                 <button class="input-button button-calendar button" type="button" aria-label="Выбор даты заезда">
                   <svg width="29" height="31" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d)">
@@ -143,11 +141,10 @@
 
               <div class="field-wrapper field-wrapper-date">
                 <label for="date-of-departure">Дата выезда:</label>
-                <input class="form-search-input date-input departure-input" type="text" name="date-of-departure"
-                  id="date-of-departure" placeholder="4 июля 2017">
+                <input class="form-search-input date-input departure-input" type="text" name="date-of-departure" id="date-of-departure" placeholder="4 июля 2017">
                 <button class="input-button button-calendar button" type="button" aria-label="Выбор даты выезда">
                   <svg width="29" height="31" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_d)">
+                    <g filter="url(#filter1_d)">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M20.406 3.02498H23.251C24.217 3.02498 25 3.84698 25 4.86198V21.164C25 22.179 24.217 23 23.251 23H5.75C4.784 23 4 22.179 4 21.164V4.86198C4 3.84698 4.784 3.02498 5.75 3.02498H8.593V1.64798C8.593 1.26698 8.887 0.958984 9.25 0.958984C9.612 0.958984 9.906 1.26698 9.906 1.64798V3.02498H13.844V1.64798C13.844 1.26698 14.138 0.958984 14.501 0.958984C14.862 0.958984 15.156 1.26698 15.156 1.64798V3.02498H19.094V1.64798C19.094 1.26698 19.387 0.958984 19.75 0.958984C20.112 0.958984 20.406 1.26698 20.406 1.64798V3.02498ZM23.5646 21.484C23.6466 21.3979 23.691 21.2828 23.688 21.164H23.689V4.86198C23.689 4.60898 23.493 4.40298 23.252 4.40298H20.407V5.78098C20.407 6.16198 20.113 6.46998 19.751 6.46998C19.388 6.46998 19.095 6.16198 19.095 5.78098V4.40298H15.157V5.78098C15.157 6.16198 14.863 6.46998 14.502 6.46998C14.139 6.46998 13.845 6.16198 13.845 5.78098V4.40298H9.907V5.78098C9.907 6.16198 9.613 6.46998 9.251 6.46998C8.888 6.46998 8.594 6.16198 8.594 5.78098V4.40298H5.75C5.50263 4.40953 5.30696 4.61458 5.312 4.86198V21.164C5.30696 21.4114 5.50263 21.6164 5.75 21.623H23.251C23.3698 21.6201 23.4826 21.5701 23.5646 21.484Z"
                         fill="currentColor" />
@@ -156,7 +153,7 @@
                         fill="currentColor" />
                     </g>
                     <defs>
-                      <filter id="filter0_d" x="0" y="0" width="29" height="31" filterUnits="userSpaceOnUse"
+                      <filter id="filter1_d" x="0" y="0" width="29" height="31" filterUnits="userSpaceOnUse"
                         color-interpolation-filters="sRGB">
                         <feFlood flood-opacity="0" result="BackgroundImageFix" />
                         <feOffset dy="4" />
@@ -195,8 +192,7 @@
                       <rect width="12" height="3" fill="currentColor" />
                     </svg>
                   </button>
-                  <input class="form-search-input number-input" type="number" name="children" id="children"
-                    placeholder="0">
+                  <input class="form-search-input number-input" type="number" name="children" id="children" placeholder="0">
                   <button class="input-button number-button-plus button" type="button" aria-label="Прибавить">
                     <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
@@ -271,7 +267,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/js.js"></script>
+  <script src="js/js.min.js"></script>
 </body>
 
 </html>
