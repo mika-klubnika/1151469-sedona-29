@@ -1195,6 +1195,19 @@ video {
   background-color: var(--gray-background);
 }
 
+.title-error {
+  margin: 0;
+  font-size: 200px;
+  line-height: normal;
+  color: #fff;
+}
+
+.text-error {
+  font-size: 30px;
+  line-height: normal;
+  font-weight: 700;
+}
+
 /* Animations */
 
 @-webkit-keyframes shake {
@@ -1397,6 +1410,10 @@ video {
 
   .navigation-toggle {
     display: flex;
+  }
+
+  .welcome-slogan {
+    height: 170px;
   }
 
   .main-page .welcome-slogan {
@@ -1634,5 +1651,13 @@ video {
     min-width: 100px;
     padding-left: 5px;
     padding-right: 5px;
+  }
+
+  .title-error {
+    font-size: 110px;
+  }
+
+  .text-error {
+    font-size: 18px;
   }
 }
