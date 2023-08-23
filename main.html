@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -10,10 +10,10 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <title>Гостиницы</title>
+  <title>Седона</title>
 </head>
 
-<body>
+<body class="main-page">
   <div class="visually-hidden">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <symbol id="logo" viewBox="0 0 186 96">
@@ -149,7 +149,7 @@
   <div class="container">
     <header class="header" data-header>
       <nav class="navigation">
-        <a class="logo" href="main.html">
+        <a class="logo">
           <svg width="138" height="70" aria-hidden="true">
             <use xlink:href="#logo"></use>
           </svg>
@@ -165,7 +165,7 @@
             <a class="navigation-link link" href="feedback.html">Форма отзыва</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link link active">Гостиницы</a>
+            <a class="navigation-link link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
         <button class="navigation-toggle" data-burger aria-label="Переключатель отображения меню" aria-pressed="false">
@@ -175,160 +175,174 @@
           <span></span>
         </button>
       </nav>
+      <section class="welcome-slogan">
+        <h1 class="visually-hidden">Добро пожаловать в великолепную Седону.</h1>
+        <svg class="welcome-main" width="458" height="352" aria-hidden="true">
+          <use xlink:href="#welcome-main"></use>
+        </svg>
+      </section>
     </header>
 
     <main>
-      <section class="hotel-filter">
-        <h2 class="visually-hidden">Фильтр гостиниц</h2>
+      <section class="advantage">
+        <p class="advantage-title text">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</p>
+        <p class="advantage-text text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
 
-        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-          <div class="wrapper-checked">
-            <fieldset class="filter-item">
-              <legend class="filter-title">Инфраструктура:</legend>
-              <ul class="list">
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="swimming-pool"
-                    id="filter-swimming-pool" checked>
-                  <label for="filter-swimming-pool">Бассейн</label>
-                </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="parking"
-                    id="filter-parking">
-                  <label for="filter-parking">Парковка</label>
-                </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="wifi"
-                    id="filter-wifi" disabled>
-                  <label for="filter-wifi">Wi-Fi</label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="filter-item">
-              <legend class="filter-title">Тип жилья:</legend>
-              <ul class="list">
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hotel"
-                    id="filter-hotel" checked disabled>
-                  <label for="filter-hotel">Гостиница</label>
-                </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="motel"
-                    id="filter-motel" checked>
-                  <label for="filter-motel">Мотель</label>
-                </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="apartments"
-                    id="filter-apartments" checked>
-                  <label for="filter-apartments">Апартаменты</label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
-          <div class="wrapper-controls">
-            <fieldset class="filter-item filter-item-price">
-              <legend class="filter-title filter-title-price">Стоимость в сутки (Р):</legend>
-              <div class="price-controls">
-                <label class="min-price">
-                  <input class="price-controls-input" type="number" name="min-price" placeholder="от 0" min="0">
-                </label>
-                <label class="max-price">
-                  <input class="price-controls-input" type="number" name="max-price" placeholder="до 3000">
-                </label>
-              </div>
-              <div class="range-filter">
-                <div class="range-controls">
-                  <div class="scale">
-                    <div class="bar"></div>
-                  </div>
-                  <div class="toggle toggle-min"></div>
-                  <div class="toggle toggle-max"></div>
-                </div>
-              </div>
-            </fieldset>
-            <button class="filter-button button" type="submit">Показать</button>
-          </div>
-        </form>
+        <ol class="reasons list">
+          <li class="reasons-item blue-block">
+
+            <div class="reasons-wrapper">
+              <h3 class="text">Настоящий <br> городок</h3>
+              <p class="reasons-text text">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
+
+            <picture>
+              <source type="image/webp" media="(max-width: 1199px)"
+                srcset="img/content/village-tablet.webp, img/content/village-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/content/village.webp, img/content/village@2x.webp 2x">
+
+              <source media="(max-width: 1199px)"
+                srcset="img/content/village-tablet.jpg 1x, img/content/village-tablet@2x.jpg 2x">
+              <img src="img/content/village.jpg" srcset="img/content/village@2x.jpg 2x" loading="lazy" width="800"
+                height="256" alt="Настоящий городок">
+            </picture>
+
+            <ul class="possibility-list list">
+              <li class="possibility-item">
+                <svg width="75" height="72" aria-hidden="true">
+                  <use xlink:href="#home"></use>
+                </svg>
+                <h3 class="text">Жильё</h3>
+                <p class="text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              </li>
+              <li class="possibility-item">
+                <svg width="75" height="70" aria-hidden="true">
+                  <use xlink:href="#food"></use>
+                </svg>
+                <h3 class="text">Еда</h3>
+                <p class="text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              </li>
+              <li class="possibility-item">
+                <svg width="64" height="77" aria-hidden="true">
+                  <use xlink:href="#souvenirs"></use>
+                </svg>
+                <h3 class="text">Сувениры</h3>
+                <p class="text">Не только китайского, но и местного производства!</p>
+              </li>
+            </ul>
+
+          </li>
+          <li class="reasons-item blue-block">
+            <picture>
+              <source media="(max-width: 1199px)" srcset="img/content/bridge-tablet.jpg">
+              <img src="img/content/bridge.jpg" loading="lazy" width="800" height="256" alt="Мост дьявола">
+            </picture>
+
+            <div class="reasons-wrapper">
+              <h3 class="text">Там есть <br> Мост дьявола</h3>
+              <p class="reasons-text text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            </div>
+
+          </li>
+          <li class="reasons-item">
+            <div class="reasons-wrapper">
+              <h3 class="text">Небольшая<br> площадь</h3>
+              <p class="reasons-text text">Все интересные места находятся очень близко</p>
+            </div>
+          </li>
+          <li class="reasons-item">
+            <div class="reasons-wrapper">
+              <h3 class="text">Красивая<br> дорога</h3>
+              <p class="reasons-text text">Ехать в седону из лас-вегаса совсем не скучно!</p>
+            </div>
+          </li>
+          <li class="reasons-item">
+            <div class="reasons-wrapper">
+              <h3 class="text">Мало<br>туристов</h3>
+              <p class="reasons-text text">Большинство едет в гранд каньон и толпится там</p>
+            </div>
+          </li>
+        </ol>
       </section>
 
-      <aside class="sort-filter border-bottom">
-        <span class="sort-filter-results text">Найдено: 3</span>
-        <div class="wrapper-sort-filter">
-          <h3 class="sort-filter-text text">Сортировка:</h3>
-          <a class="sort-filter-link sort-filter-link-active">По цене</a>
-          <a class="sort-filter-link" href="#">По типу</a>
-          <a class="sort-filter-link" href="#">По рейтингу</a>
-        </div>
-        <div class="wrap-sort">
-          <a class="wrap-sort-link" href="#">
-            <span class="visually-hidden">По возрастанию</span>
-            ▲
-          </a>
-          <a class="wrap-sort-link wrap-sort-link-active">
-            <span class="visually-hidden">По убыванию</span>
-            ▼
-          </a>
-        </div>
-      </aside>
+      <section class="hotel-search">
+        <h2 class="visually-hidden">Поиск гостиницы в седоне</h2>
+        <p class="hotel-search-title text">Заинтересовались?</p>
+        <p class="hotel-search-text text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения
+          гостиниц в седоне</p>
 
-      <section class="result-search">
-        <h2 class="visually-hidden">Результаты поиска</h2>
+        <div class="wrapper-form-search is-open" data-wrap-modal>
+          <button class="hotel-search-button button-brown button" data-btn-modal>Поиск гостиницы в седоне</button>
+          <div class="inner-form">
+            <form class="modal form-search" action="https://echo.htmlacademy.ru" method="post" data-modal>
+              <div class="field-wrapper field-wrapper-date">
+                <label for="date-of-arrival">Дата заезда:</label>
+                <input class="form-search-input date-input arrival-input" type="text" name="date-of-arrival"
+                  id="date-of-arrival" placeholder="24 апреля 2017">
+                <button class="input-button button-calendar button" type="button" aria-label="Выбор даты заезда">
+                  <svg width="29" height="31" aria-hidden="true">
+                    <use xlink:href="#calendar"></use>
+                  </svg>
+                </button>
+              </div>
 
-        <ul class="result-search-list list">
-          <li class="result-search-item border-bottom">
-            <picture>
-              <source type="image/webp" srcset="img/content/amara-resort.webp, img/content/amara-resort@2x.webp 2x">
-              <img src="img/content/amara-resort.jpg" srcset="img/content/amara-resort@2x.jpg 2x" loading="lazy"
-                width="135" height="90" alt="Amara Resort &amp; Spa">
-            </picture>
-            <a class="result-search-item-link link clicking" href="#">
-              <h3 class="text">Amara Resort &amp; Spa</h3>
-            </a>
-            <span class="result-search-type">Гостиница</span>
-            <span class="result-search-price">ОТ 4000 Р.</span>
-            <a class="detailed-link button-blue" href="#">Подробнее</a>
-            <a class="reservation-button button-brown" href="#">Забронировать</a>
-            <div class="star star--4"></div>
-            <span class="rating">Рейтинг: 8,5</span>
-          </li>
-          <li class="result-search-item border-bottom">
-            <picture>
-              <source type="image/webp"
-                srcset="img/content/desert-quail-inn.webp, img/content/desert-quail-inn@2x.webp 2x">
-              <img src="img/content/desert-quail-inn.jpg" srcset="img/content/desert-quail-inn@2x.jpg 2x" loading="lazy"
-                width="135" height="90" alt="Desert Quail Inn">
-            </picture>
-            <a class="result-search-item-link link clicking" href="#">
-              <h3 class="text">Desert Quail Inn</h3>
-            </a>
-            <span class="result-search-type">Мотель</span>
-            <span class="result-search-price">ОТ 3000 Р.</span>
-            <a class="detailed-link button-blue" href="#">Подробнее</a>
-            <a class="reservation-button button-brown" href="#">Забронировать</a>
-            <div class="star star--5"></div>
-            <span class="rating">Рейтинг: 8,9</span>
-          </li>
-          <li class="result-search-item border-bottom">
-            <picture>
-              <source type="image/webp"
-                srcset="img/content/villas-at-poco-diablo.webp, img/content/villas-at-poco-diablo@2x.webp 2x">
-              <img src="img/content/villas-at-poco-diablo.jpg" srcset="img/content/villas-at-poco-diablo@2x.jpg 2x"
-                loading="lazy" width="135" height="90" alt="Villas at Poco Diablo">
-            </picture>
-            <a class=" result-search-item-link link clicking" href="#">
-              <h3 class="text">Villas at Poco Diablo</h3>
-            </a>
-            <span class="result-search-type">Апартаменты</span>
-            <span class="result-search-price">ОТ 2000 Р.</span>
-            <a class="detailed-link button-blue" href="#">Подробнее</a>
-            <a class="reservation-button button-brown" href="#">Забронировать</a>
-            <div class="star star--2"></div>
-            <span class="rating">Рейтинг: 9,2</span>
-          </li>
-        </ul>
+              <div class="field-wrapper field-wrapper-date">
+                <label for="date-of-departure">Дата выезда:</label>
+                <input class="form-search-input date-input departure-input" type="text" name="date-of-departure"
+                  id="date-of-departure" placeholder="4 июля 2017">
+                <button class="input-button button-calendar button" type="button" aria-label="Выбор даты выезда">
+                  <svg width="29" height="31" aria-hidden="true">
+                    <use xlink:href="#calendar"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="wrapper-number-input">
+                <div class="field-wrapper field-wrapper-adults text">
+                  <label for="adults">Взрослые:</label>
+                  <button class="input-button number-button-minus button" type="button" aria-label="Убавить">
+                    <svg width="12" height="3" aria-hidden="true">
+                      <use xlink:href="#minus"></use>
+                    </svg>
+                  </button>
+                  <input class="form-search-input number-input" type="number" name="adults" id="adults" placeholder="2">
+                  <button class="input-button number-button-plus button" type="button" aria-label="Прибавить">
+                    <svg width="11" height="11" aria-hidden="true">
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="field-wrapper field-wrapper-children text">
+                  <label for="children">Дети:</label>
+                  <button class="input-button number-button-minus button" type="button" aria-label="Убавить">
+                    <svg width="12" height="3" aria-hidden="true">
+                      <use xlink:href="#minus"></use>
+                    </svg>
+                  </button>
+                  <input class="form-search-input number-input" type="number" name="children" id="children"
+                    placeholder="0">
+                  <button class="input-button number-button-plus button" type="button" aria-label="Прибавить">
+                    <svg width="11" height="11" aria-hidden="true">
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <button class="button-form-search button-blue button" type="submit">Найти</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="map">
+        <h2 class="visually-hidden">Карта седоны</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.18173346954!2d-111.83633815996852!3d34.854371453249975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1691783696009!5m2!1sru!2sru"></iframe>
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer footer-top">
       <div class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <p class="contacts-text text">#visitSEDONA</p>
@@ -376,24 +390,7 @@
     </footer>
   </div>
 
-  <!-- Шаблон карточки -->
-  <template id="hotel-template">
-    <li id="hotel" class="result-search-item border-bottom">
-      <img id="hotel-img" src="" width="135" height="90" alt="">
-      <a class="result-search-item-link link" href="#">
-        <h3 id="hotel-title" class="text"></h3>
-      </a>
-      <span id="hotel-type" class="result-search-type"></span>
-      <div class="result-search-price">ОТ <span id="hotel-price"></span> Р.</div>
-      <a class="detailed-link button-blue" href="#">Подробнее</a>
-      <a class="reservation-button button-brown" href="#">Забронировать</a>
-      <div id="hotel-star" class="star star--4"></div>
-      <div class="rating">Рейтинг: <span id="hotel-rating"></span></div>
-    </li>
-  </template>
-
   <script type="module" src="js/main.js"></script>
-
 </body>
 
 </html>

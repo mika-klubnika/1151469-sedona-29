@@ -1,0 +1,26 @@
+[
+  {
+    "title": "amara resort & spa",
+    "type": "гостиница",
+    "price": 4000,
+    "stars": 5,
+    "rating": 8.5,
+    "image": "img/amara-resort.jpg"
+  },
+  {
+    "title": "desert quail inn",
+    "type": "мотель",
+    "price": 3000,
+    "stars": 3,
+    "rating": 8.9,
+    "image": "img/desert-quail-inn.jpg"
+  },
+  {
+    "title": "villas at poco diablo",
+    "type": "апартаменты",
+    "price": 2000,
+    "stars": 2,
+    "rating": 9.2,
+    "image": "img/villas-at-poco-diablo.jpg"
+  }
+]
