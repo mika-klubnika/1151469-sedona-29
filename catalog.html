@@ -256,7 +256,7 @@
       </section>
 
       <aside class="sort-filter border-bottom">
-        <span class="sort-filter-results text">Найдено: 3</span>
+        <div class="sort-filter-results text">Найдено: <span class="results"></span></div>
         <div class="wrapper-sort-filter">
           <h3 class="sort-filter-text text">Сортировка:</h3>
           <div class="sort-select">
@@ -295,56 +295,6 @@
         <h2 class="visually-hidden">Результаты поиска</h2>
 
         <ul class="result-search-list list">
-          <li class="result-search-item border-bottom">
-            <picture>
-              <source type="image/webp" srcset="img/content/amara-resort.webp, img/content/amara-resort@2x.webp 2x">
-              <img src="img/content/amara-resort.jpg" srcset="img/content/amara-resort@2x.jpg 2x" loading="lazy"
-                width="135" height="90" alt="Amara Resort &amp; Spa">
-            </picture>
-            <a class="result-search-item-link link clicking" href="#">
-              <h3 class="text">Amara Resort &amp; Spa</h3>
-            </a>
-            <span class="result-search-type">Гостиница</span>
-            <span class="result-search-price">ОТ 4000 Р.</span>
-            <a class="detailed-link button-blue" href="#">Подробнее</a>
-            <a class="reservation-button button-brown" href="#">Забронировать</a>
-            <div class="star star--4"></div>
-            <span class="rating">Рейтинг: 8,5</span>
-          </li>
-          <li class="result-search-item border-bottom">
-            <picture>
-              <source type="image/webp"
-                srcset="img/content/desert-quail-inn.webp, img/content/desert-quail-inn@2x.webp 2x">
-              <img src="img/content/desert-quail-inn.jpg" srcset="img/content/desert-quail-inn@2x.jpg 2x" loading="lazy"
-                width="135" height="90" alt="Desert Quail Inn">
-            </picture>
-            <a class="result-search-item-link link clicking" href="#">
-              <h3 class="text">Desert Quail Inn</h3>
-            </a>
-            <span class="result-search-type">Мотель</span>
-            <span class="result-search-price">ОТ 3000 Р.</span>
-            <a class="detailed-link button-blue" href="#">Подробнее</a>
-            <a class="reservation-button button-brown" href="#">Забронировать</a>
-            <div class="star star--5"></div>
-            <span class="rating">Рейтинг: 8,9</span>
-          </li>
-          <li class="result-search-item border-bottom">
-            <picture>
-              <source type="image/webp"
-                srcset="img/content/villas-at-poco-diablo.webp, img/content/villas-at-poco-diablo@2x.webp 2x">
-              <img src="img/content/villas-at-poco-diablo.jpg" srcset="img/content/villas-at-poco-diablo@2x.jpg 2x"
-                loading="lazy" width="135" height="90" alt="Villas at Poco Diablo">
-            </picture>
-            <a class=" result-search-item-link link clicking" href="#">
-              <h3 class="text">Villas at Poco Diablo</h3>
-            </a>
-            <span class="result-search-type">Апартаменты</span>
-            <span class="result-search-price">ОТ 2000 Р.</span>
-            <a class="detailed-link button-blue" href="#">Подробнее</a>
-            <a class="reservation-button button-brown" href="#">Забронировать</a>
-            <div class="star star--2"></div>
-            <span class="rating">Рейтинг: 9,2</span>
-          </li>
         </ul>
       </section>
     </main>
@@ -396,22 +346,6 @@
       </div>
     </footer>
   </div>
-
-  <!-- Шаблон карточки -->
-  <template id="hotel-template">
-    <li id="hotel" class="result-search-item border-bottom">
-      <img id="hotel-img" src="" width="135" height="90" alt="">
-      <a class="result-search-item-link link" href="#">
-        <h3 id="hotel-title" class="text"></h3>
-      </a>
-      <span id="hotel-type" class="result-search-type"></span>
-      <div class="result-search-price">ОТ <span id="hotel-price"></span> Р.</div>
-      <a class="detailed-link button-blue" href="#">Подробнее</a>
-      <a class="reservation-button button-brown" href="#">Забронировать</a>
-      <div id="hotel-star" class="star star--4"></div>
-      <div class="rating">Рейтинг: <span id="hotel-rating"></span></div>
-    </li>
-  </template>
 
   <script type="module" src="js/main.js"></script>
 
