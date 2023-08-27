@@ -144,17 +144,20 @@
       <symbol id="minus" viewBox="0 0 12 3">
         <rect width="12" height="3" fill="currentColor" />
       </symbol>
+      <symbol id="arrow" viewBox="0 0 24 24">
+        <path d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z" fill="#0F0F0F"/>
+      </symbol>
     </svg>
   </div>
   <div class="container">
     <header class="header" data-header>
       <nav class="navigation">
-        <a class="logo" href="main.html">
+        <a class="logo" href="main.html" aria-label="Переход на главную">
           <svg width="138" height="70" aria-hidden="true">
             <use xlink:href="#logo"></use>
           </svg>
         </a>
-        <ul class="navigation-list list">
+        <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link link" href="404.html">Информация</a>
           </li>
@@ -178,8 +181,10 @@
     </header>
 
     <main>
+      <h1 class="visually-hidden">Гостиницы в Седоне</h1>
       <section class="hotel-filter">
         <h2 class="visually-hidden">Фильтр гостиниц</h2>
+        <button class="hotel-filter-btn-mobile" aria-pressed="false">Открыть фильтр</button>
 
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
           <div class="wrapper-checked">
@@ -254,9 +259,25 @@
         <span class="sort-filter-results text">Найдено: 3</span>
         <div class="wrapper-sort-filter">
           <h3 class="sort-filter-text text">Сортировка:</h3>
-          <a class="sort-filter-link sort-filter-link-active">По цене</a>
-          <a class="sort-filter-link" href="#">По типу</a>
-          <a class="sort-filter-link" href="#">По рейтингу</a>
+          <div class="sort-select">
+            <button class="sort-select-btn">
+              <span id="selected">По умолчанию</span>
+              <svg width="15" height="15" aria-hidden="true">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <ul class="sort-options">
+              <li class="sort-option">
+                <a class="sort-filter-link" href="#">По цене</a>
+              </li>
+              <li class="sort-option">
+                <a class="sort-filter-link" href="#">По типу</a>
+              </li>
+              <li class="sort-option">
+                <a class="sort-filter-link" href="#">По рейтингу</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="wrap-sort">
           <a class="wrap-sort-link" href="#">

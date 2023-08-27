@@ -76,7 +76,8 @@ video {
   height: auto;
 }
 
-.list {
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -732,7 +733,7 @@ video {
 
 /* CATALOG */
 .hotel-filter {
-  min-height: 217px;
+  /* min-height: 217px; */
   padding: 26px 66px 30px 71px;
 
   color: var(--white-basic);
@@ -972,7 +973,8 @@ video {
   transform: scale(1.3);
 }
 
-.filter-button {
+.filter-button,
+.hotel-filter-btn-mobile {
   min-width: 137px;
   min-height: 36px;
   padding: 5px;
@@ -983,15 +985,25 @@ video {
   border: 2px solid var(--white-basic);
   border-radius: 2px;
   outline: none;
+  cursor: pointer;
+}
+
+.hotel-filter-btn-mobile {
+  position: relative;
+  display: none;
+  width: 100%;
 }
 
 .filter-button:hover,
-.filter-button:focus {
+.filter-button:focus,
+.hotel-filter-btn-mobile:hover,
+.hotel-filter-btn-mobile:focus {
   color: var(--black-basic);
   background-color: var(--white-basic);
 }
 
-.filter-button:active {
+.filter-button:active,
+.hotel-filter-btn-mobile:active {
   color: var(--white-basic);
   background-color: transparent;
   outline: none;
@@ -1032,31 +1044,79 @@ video {
   color: var(--black-basic);
 }
 
-.wrapper-sort-filter a {
-  margin-right: 33px;
+.sort-select {
+  position: relative;
+}
+
+.sort-select-btn {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px;
+  width: 140px;
 
   font-size: 12px;
-  line-height: 18px;
+  text-transform: uppercase;
+
+  border: none;
+  color: var(--black-neutral);
+  background-color: var(--gray-background);
+  cursor: pointer;
+}
+
+.sort-select-btn svg {
+  display: block;
+  width: 15px;
+  height: 15px;
+  transition: transform 0.3s;
+}
+
+.is-open .sort-select-btn svg {
+  transform: rotate(180deg);
+}
+
+.sort-options {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+  box-shadow: 0px 14px 20px 0px var(--container-shadow);
+}
+
+.is-open .sort-options {
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+}
+
+.sort-option {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--gray-background);
 }
 
 .sort-filter-link {
+  width: 100%;
+  padding: 5px 7px;
+
+  font-size: 12px;
+  line-height: 18px;
+  background-color: var(--white-basic);
   color: var(--black-opacity);
-  border-bottom: 1px dashed var(--blue);
 }
 
-.sort-filter-link:not(.sort-filter-link-active):hover,
-.sort-filter-link:not(.sort-filter-link-active):focus {
+.sort-filter-link:hover,
+.sort-filter-link:focus {
   color: var(--blue);
 }
 
-.sort-filter-link:not(.sort-filter-link-active):active {
-  color: var(--black-basic);
-  border-bottom: 1px solid transparent;
-}
-
-.sort-filter-link-active {
-  color: var(--blue);
-  border: none;
+.sort-filter-link.is-active {
+  background-color: var(--blue);
+  color: var(--white-basic);
 }
 
 .wrap-sort {
@@ -1500,23 +1560,21 @@ video {
     padding: 30px 15px;
   }
 
-  .field-wrapper-date {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .date-input,
   .field-wrapper-children,
   .field-wrapper-adults {
     width: 100%;
   }
 
-  .field-wrapper-date label {
-    margin-bottom: 5px;
+  .date-input {
+    width: 65%;
   }
 
-  .field-wrapper-date .input-button {
-    top: 30px;
+  .form-search {
+    font-size: 12px;
+  }
+
+  .wrapper-number-input {
+    padding-bottom: 0;
   }
 
   .footer {
@@ -1526,6 +1584,21 @@ video {
 
   .footer-top {
     margin-top: 0;
+  }
+
+  /* Catalog */
+  .hotel-filter-btn-mobile {
+    display: block;
+  }
+
+  .filter {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+  }
+
+  .wrapper-checked {
+    margin-top: 30px;
   }
 
   .filter,
@@ -1568,17 +1641,7 @@ video {
   }
 
   .sort-filter-results {
-    grid-row: 1/2;
-    grid-column: 2/3;
     margin: 0;
-    justify-content: flex-end;
-    align-items: flex-start;
-  }
-
-  .sort-filter-text,
-  .wrapper-sort-filter a {
-    margin-right: 0;
-    margin-bottom: 7px;
   }
 
   .wrapper-sort-filter a:last-child {
@@ -1586,10 +1649,9 @@ video {
   }
 
   .wrapper-sort-filter {
-    grid-column: 1/2;
-    grid-row: 1/3;
-    flex-direction: column;
-    align-items: flex-start;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    justify-content: space-between;
   }
 
   .wrap-sort {
