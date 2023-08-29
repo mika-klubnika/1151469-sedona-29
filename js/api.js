@@ -1,5 +1,5 @@
 export const getData = (onSuccess, onFail) => {
-  fetch('../json/data.json')
+  fetch('../1151469-sedona-29/json/data.json')
     .then((response) => response.json())
     .then((data) => {
       onSuccess(data);
