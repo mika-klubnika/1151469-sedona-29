@@ -6,8 +6,6 @@
 *.pdf
 *.psd
 *.sublime*
-*.mp4 binary
-*.webm binary
 node_modules/
 npm-debug.*
 Thumbs.db
