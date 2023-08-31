@@ -12,8 +12,8 @@ export const getHotels = (hotels) => {
     resultBlock.insertAdjacentHTML('beforeend', `
       <li class="result-search-item border-bottom">
         <picture>
-          <source type="image/webp" srcset="img/content/${hotel.image}.webp, img/content/${hotel.image}@2x.webp 2x">
-          <img src="img/content/${hotel.image}.jpg" srcset="img/content/${hotel.image}@2x.jpg 2x" loading="lazy"
+          <source type="image/webp" srcset="img/hotels/${hotel.image}.webp, img/hotels/${hotel.image}@2x.webp 2x">
+          <img src="img/hotels/${hotel.image}.jpg" srcset="img/hotels/${hotel.image}@2x.jpg 2x" loading="lazy"
             width="135" height="90" alt="${hotel.title}">
         </picture>
         <a class="result-search-item-link link clicking" href="#">

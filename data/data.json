@@ -1,0 +1,186 @@
+{
+  "hotels": [
+    {
+      "title": "amara resort & spa",
+      "rating": 8.5,
+      "image": "amara-resort",
+      "swimming-pool": true,
+      "parking": false,
+      "wifi": true
+    },
+    {
+      "title": "desert quail inn",
+      "rating": 8.9,
+      "image": "desert-quail-inn",
+      "swimming-pool": false,
+      "parking": true,
+      "wifi": false
+    },
+    {
+      "title": "villas at poco diablo",
+      "rating": 9.2,
+      "image": "villas-at-poco-diablo",
+      "swimming-pool": false,
+      "parking": true,
+      "wifi": true
+    },
+    {
+      "title": "arabella hotel",
+      "rating": 9.8,
+      "image": "arabella-hotel",
+      "swimming-pool": true,
+      "parking": true,
+      "wifi": false
+    },
+    {
+      "title": "arroyo pinion hotel",
+      "rating": 9.8,
+      "image": "arroyo-pinion-hotel",
+      "swimming-pool": true,
+      "parking": false,
+      "wifi": false
+    },
+    {
+      "title": "Casa Sedona Inn",
+      "rating": 8.2,
+      "image": "casa-sedona-inn",
+      "swimming-pool": true,
+      "parking": false,
+      "wifi": false
+    },
+    {
+      "title": "El Portal Sedona Hotel",
+      "rating": 7.5,
+      "image": "el-portal-sedona-hotel",
+      "swimming-pool": false,
+      "parking": false,
+      "wifi": true
+    },
+    {
+      "title": "GreenTree Inn Sedona",
+      "rating": 6.5,
+      "image": "greenTree-inn-sedona",
+      "swimming-pool": true,
+      "parking": false,
+      "wifi": true
+    },
+    {
+      "title": "Hilton Vacation Club Ridge",
+      "rating": 6.5,
+      "image": "hilton-vacation-club-ridge",
+      "swimming-pool": false,
+      "parking": true,
+      "wifi": false
+    },
+    {
+      "title": "Sedona Pines Resort",
+      "rating": 9.5,
+      "image": "sedona-pines-resort",
+      "swimming-pool": true,
+      "parking": true,
+      "wifi": true
+    },
+    {
+      "title": "Sedona Uptown Suites",
+      "rating": 8.9,
+      "image": "sedona-uptown-suites",
+      "swimming-pool": false,
+      "parking": false,
+      "wifi": false
+    },
+    {
+      "title": "Sky Rock Sedona",
+      "rating": 7.6,
+      "image": "sky-rock-sedona",
+      "swimming-pool": false,
+      "parking": true,
+      "wifi": true
+    },
+    {
+      "title": "The Wilde Resort and Spa",
+      "rating": 7.6,
+      "image": "the-wilde-resort",
+      "swimming-pool": false,
+      "parking": true,
+      "wifi": true
+    },
+    {
+      "title": "Sky Ranch Lodge",
+      "rating": 8.9,
+      "image": "sky-ranch-lodge",
+      "swimming-pool": false,
+      "parking": true
+    },
+    {
+      "title": "Village Lodge",
+      "rating": 6.9,
+      "image": "village-lodge",
+      "swimming-pool": false,
+      "parking": true,
+      "wifi": false
+    }
+  ],
+  "media": [
+    {
+      "image": "img-1",
+      "author": "Иван",
+      "like": 901
+    },
+    {
+      "image": "img-2",
+      "author": "Мария",
+      "like": 157
+    },
+    {
+      "image": "img-3",
+      "author": "Анна",
+      "like": 238
+    },
+    {
+      "image": "img-4",
+      "author": "Сергей",
+      "like": 79
+    },
+    {
+      "image": "img-5",
+      "author": "Татьяна",
+      "like": 110
+    },
+    {
+      "image": "img-6",
+      "author": "Анатолий",
+      "like": 248
+    },
+    {
+      "image": "img-7",
+      "author": "Евгений",
+      "like": 33
+    },
+    {
+      "image": "img-8",
+      "author": "Ксения",
+      "like": 580
+    },
+    {
+      "image": "img-9",
+      "author": "Максим",
+      "like": 132
+    },
+    {
+      "image": "img-10",
+      "author": "Андрей",
+      "like": 352
+    },
+    {
+      "image": "img-11",
+      "author": "Мария",
+      "like": 99
+    },
+    {
+      "image": "img-12",
+      "author": "Юлия",
+      "like": 761
+    }
+  ],
+  "test": "Lorem ipsum dolor sit amet."
+}

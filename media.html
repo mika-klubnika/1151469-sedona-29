@@ -8,6 +8,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="lightbox/css/lightbox.min.css">
   <link rel="stylesheet" href="css/style.css">
 
   <title>Фото и видео</title>
@@ -183,17 +184,25 @@
       </section>
     </header>
 
-    <main style="display: flex; align-items: center; justify-content: center;">
-      <h1>Страница в разработке</h1>
-      <!-- <picture>
-        <source type="image/webp" media="(min-width: 1150px)" srcset="img/desktop.webp, img/desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet.webp, img/tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/mobile.webp, img/mobile@2x.webp 2x">
+    <main>
+      <section class="gallery">
+        <h1 class="gallery-title">Фото и видео</h1>
+        <p class="gallery-text text">Не можете решиться на путешествие из-за курса?<br>
+          Фотографии помогут вам забыть о политике и экономике.</p>
+        <ul class="gallery-list">
+        </ul>
+      </section>
 
-        <source media="(min-width: 1150px)" srcset="img/desktop.jpg, img/desktop@2x.jpg 2x">
-        <source media="(min-width: 768px)" srcset="img/tablet.jpg, img/tablet@2x.jpg 2x">
-        <img src="img/mobile.jpg" srcset="img/mobile@2x.jpg 2x" width="260" height="315" alt="">
-      </picture> -->
+      <section class="video">
+        <h2 class="video-title">Все еще сомневаетесь?</h2>
+        <p class="video-text text">Смотрите видеопрезентацию и скорее за билетами, пока <br> они не подорожали в очередной раз!</p>
+
+        <video controls poster="video/poster.jpg">
+          <source src="video/video-sedona.mp4" type="video/mp4">
+          <source src="video/video-sedona.webm" type="video/webm">
+          <p>Ваш браузер не поддерживает встроенные видео.</p>
+        </video>
+      </section>
     </main>
 
     <footer class="footer">
@@ -245,6 +254,8 @@
   </div>
 
   <script type="module" src="js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="lightbox/js/lightbox.min.js"></script>
 
 </body>
 
