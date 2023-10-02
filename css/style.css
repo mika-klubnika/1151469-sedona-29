@@ -221,9 +221,6 @@ ol {
   z-index: 15;
 
   display: none;
-  /* align-items: center;
-  justify-content: center; */
-
   padding: 0;
   width: 40px;
   height: 40px;
@@ -472,7 +469,7 @@ ol {
   text-transform: uppercase;
 }
 
-/* Modal window */
+/* Modal */
 .inner-form {
   position: absolute;
   overflow: hidden;
@@ -734,7 +731,6 @@ ol {
 
 /* CATALOG */
 .hotel-filter {
-  /* min-height: 217px; */
   padding: 26px 66px 30px 71px;
 
   color: var(--white-basic);
@@ -1257,12 +1253,14 @@ ol {
 }
 
 /* Media */
-.gallery {
+.gallery,
+.feedback {
   padding-top: 110px;
 }
 
 .gallery-title,
-.video-title {
+.video-title,
+.feedback-title {
   margin-top: 0;
   margin-bottom: 30px;
 
@@ -1273,7 +1271,8 @@ ol {
 }
 
 .gallery-text,
-.video-text {
+.video-text,
+.feedback-text {
   margin-bottom: 75px;
   text-align: center;
 }
@@ -1364,6 +1363,237 @@ ol {
   justify-self: center;
   width: 800px;
   height: auto;
+}
+
+/* FEEDBACK */
+.form {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-left: 120px;
+  padding-right: 120px;
+  margin-bottom: 70px;
+}
+
+.form-title {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 60px;
+
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+  text-align: center;
+}
+
+.form-full-name .form-title,
+.form-impression .form-title {
+  text-align: start;
+}
+
+.form-wrapper {
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.form-wrapper label {
+  margin-right: 15px;
+}
+
+.form-wrapper input,
+.form-wrapper textarea {
+  padding: 20px;
+  height: 58px;
+
+  border: none;
+  background-color: #f2f2f2;
+}
+
+.form-wrapper input::placeholder,
+.form-wrapper textarea::placeholder {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.form-wrapper textarea {
+  width: 100%;
+  height: 160px;
+  resize: none;
+}
+
+.form-full-name,
+.form-impression {
+  width: 50%;
+}
+
+.form-full-name {
+  position: relative;
+  padding-left: 80px;
+}
+
+.form-full-name::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #DBDBDB;
+}
+
+.form-full-name .form-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-full-name .form-item:last-child {
+  margin-bottom: 0;
+}
+
+.form-full-name input {
+  padding: 20px;
+  width: 100%;
+}
+
+.form-contact .form-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-contact .form-item {
+  position: relative;
+}
+
+.form-contact input {
+  width: calc(257px + 58px);
+}
+
+.contact-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+
+  background-color: #e6e6e6;
+}
+
+/* radio + checkbox */
+.form-choice input+label {
+  position: relative;
+  margin-right: 0;
+}
+
+.form-choice input+label::before,
+.form-choice input:checked+label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.form-choice input+label::before {
+  top: -16px;
+
+  width: 56px;
+  height: 56px;
+
+  background-color: #f2f2f2;
+}
+
+.form-impression {
+  order: -1;
+}
+
+.form-choice .form-item {
+  display: flex;
+  align-items: center;
+
+  height: 56px;
+}
+
+.form-impression .form-item {
+  margin-bottom: 20px;
+}
+
+.form-impression label {
+  padding-left: calc(56px + 20px);
+  font-weight: 700;
+}
+
+.form-impression input+label::before {
+  border-radius: 50%;
+}
+
+.form-impression input:checked+label::after {
+  left: 17px;
+
+  width: 22px;
+  height: 22px;
+
+  background-color: #333333;
+  border-radius: 50%;
+}
+
+.form-attractions label {
+  padding-left: calc(56px + 25px);
+}
+
+.form-attractions .form-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form-attractions input+label::before {
+  border-radius: 5px;
+}
+
+.form-attractions input:checked+label::after {
+  top: 4px;
+  left: 18px;
+
+  width: 25px;
+  height: 17px;
+
+  background-image: url("../img/svg/check.svg");
+  background-repeat: no-repeat;
+}
+
+.form-submit {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.form-submit button {
+  width: 480px;
+  height: 58px;
+
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  background-color: #81b3d2;
+  border: none;
+  cursor: pointer;
 }
 
 /* 404 */
@@ -1490,6 +1720,49 @@ ol {
 
   .video video {
     width: 100%;
+  }
+
+  .form {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .form-full-name {
+    padding-left: 60px;
+  }
+
+  .form-contact .form-list {
+    flex-direction: column;
+  }
+
+  .form-contact .form-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .form-contact label {
+    margin-bottom: 15px;
+  }
+
+  .form-contact input {
+    width: 100%;
+  }
+
+  .contact-icon {
+    top: inherit;
+    bottom: 0;
+  }
+
+  .form-attractions .form-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 0 90px;
+    row-gap: 30px;
+  }
+
+  .form-submit button {
+    width: 324px;
   }
 }
 
@@ -1702,7 +1975,6 @@ ol {
     margin-top: 0;
   }
 
-  /* Catalog */
   .hotel-filter-btn-mobile {
     display: block;
   }
@@ -1840,25 +2112,28 @@ ol {
   }
 
   .gallery,
-  .video {
+  .video,
+  .feedback {
     padding-top: 45px;
     padding-left: 20px;
     padding-right: 20px;
   }
 
   .gallery-title,
-  .video-title {
+  .video-title,
+  .feedback-title {
     margin-bottom: 25px;
     font-size: 18px;
   }
 
   .gallery-text,
-  .video-text {
+  .video-text .feedback-text {
     margin-bottom: 35px;
   }
 
   .gallery-text br,
-  .video-text br {
+  .video-text br,
+  .feedback-text br {
     display: none;
   }
 
@@ -1878,5 +2153,56 @@ ol {
 
   .text-error {
     font-size: 18px;
+  }
+
+  .form {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .form-impression {
+    order: 0;
+  }
+
+  .form-full-name {
+    padding-left: 0;
+  }
+
+  .form-full-name,
+  .form-impression {
+    width: 100%;
+  }
+
+  .form-full-name::before {
+    display: none;
+  }
+
+  .form-attractions .form-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .form-title {
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+
+  .form-full-name .form-title,
+  .form-impression .form-title {
+    text-align: center;
+  }
+
+  .form-submit p {
+    margin-bottom: 15px;
+  }
+
+  .form-submit button {
+    width: 100%;
+  }
+
+  .form-submit {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

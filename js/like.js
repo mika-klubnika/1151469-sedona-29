@@ -10,9 +10,9 @@ export const initLike = () => {
   likeButtons.forEach((btn, index) => {
     btn.addEventListener('click', () => {
       btn.classList.toggle('selected');
-      const current = Number(likeCounts[index].innerHTML);
+      const current = Number(likeCounts[index].textContent);
       const inc = btn.classList.contains('selected') ? 1 : -1;
-      likeCounts[index].innerHTML = current + inc;
+      likeCounts[index].textContent = current + inc;
     });
   });
 };

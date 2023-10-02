@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta name="color-scheme" content="only light">
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -144,6 +145,18 @@
       <symbol id="minus" viewBox="0 0 12 3">
         <rect width="12" height="3" fill="currentColor" />
       </symbol>
+      <symbol id="phone" viewBox="0 0 18 18">
+        <g >
+          <g transform="translate(-85.000000, -126.000000)">
+            <g transform="translate(85.000000, 126.000000)">
+              <path id="Shape" fill="#010101" d="M3.6,7.8C5,10.6,7.4,12.9,10.2,14.4l2.2-2.2c0.3-0.3,0.699-0.4,1-0.2c1.1,0.4,2.3,0.6,3.6,0.6 c0.6,0,1,0.4,1,1V17c0,0.6-0.4,1-1,1C7.6,18,0,10.4,0,1c0-0.6,0.4-1,1-1h3.5c0.6,0,1,0.4,1,1c0,1.2,0.2,2.4,0.6,3.6 c0.1,0.3,0,0.7-0.2,1L3.6,7.8L3.6,7.8z"/>
+            </g>
+          </g>
+        </g>
+      </symbol>
+      <symbol id="mail" viewBox="0 0 16 16">
+        <path d="M8,10c-0.266,0-0.5-0.094-1-0.336L0,6v7c0,0.55,0.45,1,1,1h14c0.55,0,1-0.45,1-1V6L9,9.664C8.5,9.906,8.266,10,8,10z M15,2 H1C0.45,2,0,2.45,0,3v0.758l8,4.205l8-4.205V3C16,2.45,15.55,2,15,2z"/>
+      </symbol>
     </svg>
   </div>
   <div class="container">
@@ -183,8 +196,100 @@
       </section>
     </header>
 
-    <main style="display: flex; align-items: center; justify-content: center;">
-      <h1>Страница в разработке</h1>
+    <main>
+      <section class="feedback">
+        <h1 class="feedback-title">Оставьте свой отзыв</h1>
+        <p class="feedback-text text">Помогите нашим отелям стать лучше! оставьте отзыв о них,<br> а также о посещенных
+          вами достопримечательностях</p>
+        <form class="feedback-form form" method="post" action="https://echo.htmlacademy.ru">
+          <div class="form-wrapper form-full-name">
+            <h2 class="form-title">Представьтесь:</h2>
+            <ul class="form-list">
+              <li class="form-item">
+                <label for="first-name">ИМЯ*:</label>
+                <input id="first-name" name="first-name" type="text" placeholder="Петр" required>
+              </li>
+              <li class="form-item">
+                <label for="last-name">ФАМИЛИЯ*:</label>
+                <input id="last-name" name="last-name" type="text" placeholder="Иванов" required>
+              </li>
+              <li class="form-item">
+                <label for="patronymic">Отчество:</label>
+                <input id="patronymic" name="patronymic" type="text" placeholder="Александрович">
+              </li>
+            </ul>
+          </div>
+          <div class="form-wrapper form-contact">
+            <h2 class="form-title">Контактная информация:</h2>
+            <ul class="form-list">
+              <li class="form-item">
+                <label for="phone">Телефон*:</label>
+                <input id="phone" name="phone" type="tel" placeholder="Введите телефон" required>
+                <div class="contact-icon">
+                  <svg width="18px" height="18px" aria-hidden="true">
+                    <use xlink:href="#phone"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="form-item">
+                <label for="email">Электронная почта*:</label>
+                <input id="email" name="email" type="email" placeholder="Введите e-mail" required>
+                <div class="contact-icon">
+                  <svg width="16px" height="16px" aria-hidden="true">
+                    <use xlink:href="#mail"></use>
+                  </svg>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="form-wrapper form-impression form-choice">
+            <h2 class="form-title">ВАше Общее впечатление:</h2>
+            <ul class="form-list">
+              <li class="form-item">
+                <input class="visually-hidden" id="positive" name="impression" type="radio" value="Скорее положительное" checked>
+                <label for="positive">Скорее положительное</label>
+              </li>
+              <li class="form-item">
+                <input class="visually-hidden" id="negative" name="impression" type="radio" value="Скорее отрицательное">
+                <label for="negative">Скорее отрицательное</label>
+              </li>
+              <li class="form-item">
+                <input class="visually-hidden" id="indefinite" name="impression" type="radio" value="Затрудняюсь ответить">
+                <label for="indefinite">Затрудняюсь ответить</label>
+              </li>
+            </ul>
+          </div>
+          <div class="form-wrapper form-attractions form-choice">
+            <h2 class="form-title">посещенные <br> достопримечательности:</h2>
+            <ul class="form-list">
+              <li class="form-item">
+                <input class="visually-hidden" id="devils-bridge" name="devils-bridge" type="checkbox" value="Мост Дьявола" checked>
+                <label for="devils-bridge">Мост Дьявола</label>
+              </li>
+              <li class="form-item">
+                <input class="visually-hidden" id="bell-mountain" name="bell-mountain" type="checkbox" value="Гора-Колокол" checked>
+                <label for="bell-mountain">Гора-Колокол</label>
+              </li>
+              <li class="form-item">
+                <input class="visually-hidden" id="slide-park" name="slide-park" type="checkbox" value="Слайд-парк">
+                <label for="slide-park">Слайд-парк</label>
+              </li>
+              <li class="form-item">
+                <input class="visually-hidden" id="red-rocks" name="red-rocks" type="checkbox" value="Красные скалы">
+                <label for="red-rocks">Красные скалы</label>
+              </li>
+            </ul>
+          </div>
+          <div class="form-wrapper">
+            <h2 class="form-title">Опишите свои эмоции:</h2>
+            <textarea name="comment" id="comment" placeholder="Опишите свои эмоции:"></textarea>
+          </div>
+          <div class="form-submit">
+            <p class="text">* — обязательные поля</p>
+            <button type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+          </div>
+        </form>
+      </section>
     </main>
 
     <footer class="footer">
@@ -198,7 +303,7 @@
         <h2 class="visually-hidden">Соц сети</h2>
         <ul class="footer-icon-list list">
           <li class="footer-icon-item">
-            <a class="footer-icon-link button-blue" href="#">
+            <a class="footer-icon-link button-blue" href="404.html">
               <span class="visually-hidden">Twitter</span>
               <svg width="17" height="17" aria-hidden="true">
                 <use xlink:href="#twitter"></use>
@@ -206,7 +311,7 @@
             </a>
           </li>
           <li class="footer-icon-item">
-            <a class="footer-icon-link button-blue" href="#">
+            <a class="footer-icon-link button-blue" href="404.html">
               <span class="visually-hidden">Facebook</span>
               <svg width="12" height="22" aria-hidden="true">
                 <use xlink:href="#facebook"></use>
@@ -214,7 +319,7 @@
             </a>
           </li>
           <li class="footer-icon-item">
-            <a class="footer-icon-link button-blue" href="#">
+            <a class="footer-icon-link button-blue" href="404.html">
               <span class="visually-hidden">Youtube</span>
               <svg width="20" height="16" aria-hidden="true">
                 <use xlink:href="#youtube"></use>

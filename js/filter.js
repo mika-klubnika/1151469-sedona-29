@@ -4,14 +4,14 @@ const breakpointLg = window.matchMedia('(min-width:768px)');
 
 const openFilter = () => {
   btnFilter.ariaPressed = 'true';
-  btnFilter.innerHTML = "";
+  btnFilter.textContent = "";
   btnFilter.insertAdjacentHTML('beforeend', `<span>Закрыть фильтр</span>`);
   filter.style.maxHeight = `${filter.scrollHeight}px`;
 };
 
 const closeFilter = () => {
   btnFilter.ariaPressed = 'false';
-  btnFilter.innerHTML = "";
+  btnFilter.textContent = "";
   btnFilter.insertAdjacentHTML('beforeend', `<span>Открыть фильтр</span>`);
   filter.style.maxHeight = '0';
 };
